@@ -67,9 +67,13 @@ syntax keyword tolkKeyword import export true false null redef mutate tolk as is
 syntax match tolkKeyword "!is\>"
 
 " Types
-syntax keyword tolkType type enum int cell void bool slice tuple builder continuation never coins
+syntax keyword tolkType type enum int cell void bool slice tuple builder continuation never coins address
 syntax match tolkType "\<int\d\+\>"
 syntax match tolkType "\<uint\d\+\>"
+" Builtin stdlib types
+syntax keyword tolkType varint16 varuint16 varint32 varuint32
+syntax match tolkType "\<bits\d\+\>"
+syntax match tolkType "\<bytes\d\+\>"
 
 " Storage modifiers
 syntax keyword tolkModifier global const var val fun get struct
